@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import PropertyCard from "./PropertyCard";
 
-function Gallery() {
+function Gallery({searchText}) {
   const [properties, setProperties] = useState([]);
   /*[] stays empty as no properties have been loaded into the file yet
   properties = current list of properties on screen
@@ -18,12 +18,23 @@ function Gallery() {
     loadProperties();
   }, []);
 
+
+  /* filter logic added here, if the input field is empty then all properties will be shown*/
+  const input = searchText.toLowerCase();
+  const filtered = properties.filter((p) => {
+    if (input === "") return true;
+    return (
+        p.location.toLowerCase().includes(input) 
+        || p.type.toLowerCase().includes(input)
+    );
+  });
+
   /*maps the properties and then each property is assigned a key based on its id*/
   return (
     <section>
       <h2>Properties:</h2>
       <div className="property-list">
-        {properties.map((p) => (
+        {filtered.map((p) => (
           <PropertyCard key={p.id} property={p} />
         ))}
       </div>

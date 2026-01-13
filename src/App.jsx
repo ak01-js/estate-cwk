@@ -5,13 +5,13 @@ import Gallery from './components/Gallery';
 
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [searchText,setSearchText] = useState("");
 
   return (
     <div>
-      <h1>Property Search</h1>
-      <SearchBar />
-      <Gallery />
+      <h1>Estate Agent</h1>
+      <SearchBar searchText={searchText} setSearchText={setSearchText} />
+      <Gallery searchText={searchText}/>
     </div>
   )
 }

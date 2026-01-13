@@ -1,11 +1,19 @@
 *{
-  background-color: #e1dddd;
+  background-color: #f7f7f7;
   color: black;
 
 
 }
 h1,h2{
   text-align: center;
+}
+
+.searchBar{
+  text-align: center;
+}
+input{
+height: 30px;;
+
 }
 
 .property-list {
