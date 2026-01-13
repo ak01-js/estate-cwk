@@ -82,7 +82,7 @@
         },
         {
             "id":"prop6",
-			"type":"Flat",
+			"type":"House",
             "bedrooms":2,
 			"price":350000,
 			"tenure":"Freehold",
