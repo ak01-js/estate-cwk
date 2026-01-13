@@ -9,7 +9,7 @@ function App() {
 
   return (
     <div>
-      <h1>Estate Agent</h1>
+      <h1>Property Listings</h1>
       <SearchBar searchText={searchText} setSearchText={setSearchText} />
       <Gallery searchText={searchText}/>
     </div>

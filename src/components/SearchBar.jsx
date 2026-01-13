@@ -7,7 +7,7 @@ function SearchBar({searchText, setSearchText}){
         <section className="searchBar">
             <h2>Search Properties:</h2>
             <input type="text"
-            placeholder="Search a property by location or postcode:"
+            placeholder="Search a property by type or postcode:"
             value={searchText}
             onChange={(e)=>{setSearchText(e.target.value);}
             } />
